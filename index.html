@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DevTools Hacker Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div class="container">
+    <h1>DevTools Hacker Game</h1>
+    <div class="alias-input">
+      <input type="text" id="hacker-alias" placeholder="Enter Hacker Alias">
+      <button onclick="saveAlias()">Set Alias</button>
+    </div>
+    <div class="score-board">Score: <span id="score">0</span></div>
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <p>Level <span id="level-number">1</span>/8</p>
+    <p id="level-description" class="terminal"></p>
+    <input type="text" id="answer-input" placeholder="Enter your answer">
+    <button onclick="checkAnswer()">Check Answer</button>
+    <p id="feedback"></p>
+    <div id="leaderboard">
+      <h2>Leaderboard</h2>
+      <ul id="leaderboard-list"></ul>
+    </div>
+  </div>
+  <audio id="success-sound" src="success.mp3"></audio>
+  <audio id="error-sound" src="error.mp3"></audio>
+  <script src="matrix.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
